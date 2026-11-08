@@ -101,5 +101,19 @@ class Employee {
   }
 }
 
+class Manager extends Employee {
+  private department: string;
+
+  constructor(name: string, baseSalary: number, department: string) {
+    super(name, baseSalary);
+    this.department = department;
+  }
+  getRoleInfo() {
+    return `Manager of ${this.department}: ${this.name}`;
+  }
+}
+
 const employee = new Employee("shanto", 50000);
+const manager = new Manager("shanto", 14000, "business development");
 console.log(employee.getDetails());
+console.log(manager.getRoleInfo());
