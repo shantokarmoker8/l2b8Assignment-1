@@ -23,3 +23,13 @@ const processInput = (value: Value) => {
 };
 
 console.log(processInput(true));
+
+//* ======================[Problem 3]======================
+
+const formatCoordinate = ([latitude, longitude, locationName]: readonly [
+  number,
+  number,
+  string,
+]) => {
+  return `Location: ${locationName} (${latitude}, ${longitude})`;
+};
