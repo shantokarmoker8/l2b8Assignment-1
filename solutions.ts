@@ -65,3 +65,23 @@ const getPopularCourses = (courses: Course[], minStudents: number) => {
 };
 
 console.log(getPopularCourses(courses, 50));
+
+//* ======================[Problem 6]======================
+
+interface User {
+  id: number;
+  name: string;
+  role: string;
+}
+
+const users: User[] = [
+  { id: 1, name: "Rakib", role: "Admin" },
+  { id: 2, name: "Sadia", role: "Editor" },
+  { id: 3, name: "Tariq", role: "Subscriber" },
+];
+
+const pluckValues = <T, K extends keyof T>(items: T[], key: K): T[K][] => {
+  return items.map((item) => item[key]);
+};
+
+console.log(pluckValues(users, "role"));
