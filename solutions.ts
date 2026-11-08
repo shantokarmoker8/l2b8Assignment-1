@@ -13,7 +13,13 @@ type Value = string | number | boolean;
 const processInput = (value: Value) => {
   if (typeof value === "string") {
     return value.trim().toLowerCase();
+  } else if (typeof value === "number") {
+    return value * 10;
+  } else if (value === true) {
+    return "Active";
+  } else {
+    return "Inactive";
   }
 };
 
-console.log(processInput(" hello WorLd"));
+console.log(processInput(true));
