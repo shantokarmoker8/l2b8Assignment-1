@@ -35,3 +35,11 @@ const formatCoordinate = ([latitude, longitude, locationName]: readonly [
 };
 
 console.log(formatCoordinate([23.81, 90.41, "Dhaka"]));
+
+//* ======================[Problem 4]======================
+
+const concatenateArrays = <T>(...arrays: T[][]) => {
+  return arrays.flat();
+};
+console.log(concatenateArrays([1, 2, 4], [5, 6, 8]));
+console.log(concatenateArrays(["a", "b", "c"], ["d", "e", "k"]));
