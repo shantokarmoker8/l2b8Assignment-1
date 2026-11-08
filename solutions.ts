@@ -58,10 +58,10 @@ const courses: Course[] = [
   { title: "Next.js Pro", students: 85, isPublished: true },
 ];
 
-const getPopularCourses = (courses: Course[]) => {
+const getPopularCourses = (courses: Course[], minStudents: number) => {
   return courses.filter((course) => {
-    return course.isPublished === true;
+    return course.isPublished === true && course.students >= minStudents;
   });
 };
 
-console.log(getPopularCourses(courses));
+console.log(getPopularCourses(courses, 50));
