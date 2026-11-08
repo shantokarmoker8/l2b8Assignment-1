@@ -85,3 +85,21 @@ const pluckValues = <T, K extends keyof T>(items: T[], key: K): T[K][] => {
 };
 
 console.log(pluckValues(users, "role"));
+
+//* ======================[Problem 7]======================
+
+class Employee {
+  name: string;
+  baseSalary: number;
+
+  constructor(name: string, baseSalary: number) {
+    this.name = name;
+    this.baseSalary = baseSalary;
+  }
+  getDetails() {
+    return `Employee: ${this.name}, Base Salary: ${this.baseSalary}`;
+  }
+}
+
+const employee = new Employee("shanto", 50000);
+console.log(employee.getDetails());
