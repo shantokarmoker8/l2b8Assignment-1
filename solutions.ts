@@ -89,8 +89,8 @@ console.log(pluckValues(users, "role"));
 //* ======================[Problem 7]======================
 
 class Employee {
-  name: string;
-  baseSalary: number;
+  protected name: string;
+  private baseSalary: number;
 
   constructor(name: string, baseSalary: number) {
     this.name = name;
