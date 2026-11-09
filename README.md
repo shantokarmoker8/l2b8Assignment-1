@@ -9,4 +9,4 @@ My solutions for TypeScript and OOP assignment.
 
 ## Author
 
-Shanto Karmoker
+- [Shanto Karmoker](https://github.com/shantokarmoker8)
