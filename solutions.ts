@@ -22,7 +22,7 @@ const processInput = (value: Value) => {
   }
 };
 
-console.log(processInput(true));
+//? console.log(processInput(true));
 
 //* ======================[Problem 3]======================
 
@@ -34,15 +34,15 @@ const formatCoordinate = ([latitude, longitude, locationName]: readonly [
   return `Location: ${locationName} (${latitude}, ${longitude})`;
 };
 
-console.log(formatCoordinate([23.81, 90.41, "Dhaka"]));
+//? console.log(formatCoordinate([23.81, 90.41, "Dhaka"]));
 
 //* ======================[Problem 4]======================
 
 const concatenateArrays = <T>(...arrays: T[][]): T[] => {
   return arrays.flat();
 };
-console.log(concatenateArrays([1, 2, 4], [5, 6, 8]));
-console.log(concatenateArrays(["a", "b", "c"], ["d", "e", "k"]));
+//? console.log(concatenateArrays([1, 2, 4], [5, 6, 8]));
+//? console.log(concatenateArrays(["a", "b", "c"], ["d", "e", "k"]));
 
 //* ======================[Problem 5]======================
 
@@ -64,7 +64,7 @@ const getPopularCourses = (courses: Course[], minStudents: number) => {
   });
 };
 
-console.log(getPopularCourses(courses, 50));
+//? console.log(getPopularCourses(courses, 50));
 
 //* ======================[Problem 6]======================
 
@@ -84,7 +84,7 @@ const pluckValues = <T, K extends keyof T>(items: T[], key: K): T[K][] => {
   return items.map((item) => item[key]);
 };
 
-console.log(pluckValues(users, "role"));
+//? console.log(pluckValues(users, "role"));
 
 //* ======================[Problem 7]======================
 
@@ -115,5 +115,20 @@ class Manager extends Employee {
 
 const employee = new Employee("shanto", 50000);
 const manager = new Manager("shanto", 14000, "business development");
-console.log(employee.getDetails());
-console.log(manager.getRoleInfo());
+//? console.log(employee.getDetails());
+//? console.log(manager.getRoleInfo());
+
+//* ======================[Problem 8]======================
+
+const validateAgeAsync = (age: number): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    if (age >= 18) {
+      setTimeout(() => {
+        resolve("Access Granted");
+      }, 1000);
+    } else {
+      reject(new Error("Access Denied: Must be 18 or older"));
+    }
+  });
+};
+console.log(validateAgeAsync(26));
