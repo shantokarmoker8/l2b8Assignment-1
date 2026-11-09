@@ -1,6 +1,6 @@
 //* ======================[Problem 1]======================
 
-const multiplyValue = (value: number, multiplier: number = 2) => {
+const multiplyValue = (value: number, multiplier: number = 2): number => {
   return value * multiplier;
 };
 
@@ -10,7 +10,7 @@ multiplyValue(1, 2);
 
 type Value = string | number | boolean;
 
-const processInput = (value: Value) => {
+const processInput = (value: Value): string | number => {
   if (typeof value === "string") {
     return value.trim().toLowerCase();
   } else if (typeof value === "number") {
@@ -58,7 +58,10 @@ const courses: Course[] = [
   { title: "Next.js Pro", students: 85, isPublished: true },
 ];
 
-const getPopularCourses = (courses: Course[], minStudents: number) => {
+const getPopularCourses = (
+  courses: Course[],
+  minStudents: number,
+): Course[] => {
   return courses.filter((course) => {
     return course.isPublished === true && course.students >= minStudents;
   });
@@ -96,7 +99,7 @@ class Employee {
     this.name = name;
     this.baseSalary = baseSalary;
   }
-  getDetails() {
+  getDetails(): string {
     return `Employee: ${this.name}, Base Salary: ${this.baseSalary}`;
   }
 }
@@ -108,7 +111,7 @@ class Manager extends Employee {
     super(name, baseSalary);
     this.department = department;
   }
-  getRoleInfo() {
+  getRoleInfo(): string {
     return `Manager of ${this.department}: ${this.name}`;
   }
 }
