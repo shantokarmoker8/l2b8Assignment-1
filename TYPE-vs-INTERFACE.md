@@ -8,7 +8,7 @@ In TypeScript, "type" and "interface" are two very important concept. They allow
 
 Let's start with "interface". It is primarily used to define the structure of and object.
 
-### Example:
+**Example:**
 
 ```
 interface Student {
