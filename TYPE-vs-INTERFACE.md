@@ -39,3 +39,11 @@ age: number;
 In this case, "User" will contain both "name" and "age".
 
 However, you cannot define a new "type" with the same name as an existing one. On the other hand, "type" allows for the creation of union and intersection types.
+
+type Status = "active" | "inactive";
+
+Here, the value of "Status" can only be either "active" or "inactive".
+
+Conclusion
+
+In summary, both "type" and "interface" help in defining data structures in TypeScript. "interface" is well-suited for defining the structure of objects, while "type" is more versatile for creating union types, intersection types, and other complex type definitions.
