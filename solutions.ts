@@ -1,12 +1,6 @@
-//* ======================[Problem 1]======================
-
 const multiplyValue = (value: number, multiplier: number = 2): number => {
   return value * multiplier;
 };
-
-multiplyValue(1, 2);
-
-//* ======================[Problem 2]======================
 
 type Value = string | number | boolean;
 
@@ -22,10 +16,6 @@ const processInput = (value: Value): string | number => {
   }
 };
 
-//? console.log(processInput(true));
-
-//* ======================[Problem 3]======================
-
 const formatCoordinate = ([latitude, longitude, locationName]: readonly [
   number,
   number,
@@ -34,17 +24,9 @@ const formatCoordinate = ([latitude, longitude, locationName]: readonly [
   return `Location: ${locationName} (${latitude}, ${longitude})`;
 };
 
-//? console.log(formatCoordinate([23.81, 90.41, "Dhaka"]));
-
-//* ======================[Problem 4]======================
-
 const concatenateArrays = <T>(...arrays: T[][]): T[] => {
   return arrays.flat();
 };
-//? console.log(concatenateArrays([1, 2, 4], [5, 6, 8]));
-//? console.log(concatenateArrays(["a", "b", "c"], ["d", "e", "k"]));
-
-//* ======================[Problem 5]======================
 
 interface Course {
   title: string;
@@ -67,10 +49,6 @@ const getPopularCourses = (
   });
 };
 
-//? console.log(getPopularCourses(courses, 50));
-
-//* ======================[Problem 6]======================
-
 interface User {
   id: number;
   name: string;
@@ -86,10 +64,6 @@ const users: User[] = [
 const pluckValues = <T, K extends keyof T>(items: T[], key: K): T[K][] => {
   return items.map((item) => item[key]);
 };
-
-//? console.log(pluckValues(users, "role"));
-
-//* ======================[Problem 7]======================
 
 class Employee {
   protected name: string;
@@ -116,13 +90,6 @@ class Manager extends Employee {
   }
 }
 
-const employee = new Employee("shanto", 50000);
-const manager = new Manager("shanto", 14000, "business development");
-//? console.log(employee.getDetails());
-//? console.log(manager.getRoleInfo());
-
-//* ======================[Problem 8]======================
-
 const validateAgeAsync = (age: number): Promise<string> => {
   return new Promise((resolve, reject) => {
     if (age >= 18) {
@@ -134,11 +101,3 @@ const validateAgeAsync = (age: number): Promise<string> => {
     }
   });
 };
-
-validateAgeAsync(19)
-  .then((result) => {
-    console.log(result);
-  })
-  .catch((error) => {
-    console.log(error.message);
-  });
